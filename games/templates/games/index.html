@@ -1,0 +1,44 @@
+{% extends "games/base.html" %}
+{% block header %}
+{% load staticfiles %}
+<link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+{% if scores_list %}
+<div class="panel">
+<div class="panel-header">
+	<div class="question">Scores</div>
+	<p>List of 5 latest scores.</p>
+</div>
+<div class="panel-body">
+	{% for score in scores_list %}
+	<div class="score-container">
+		<div class="row bold">
+			<div class="col-xs-3"><span>Game: </span></div>
+			<div class="col-xs-9">{{ score.game.name }}</div>
+		</div>
+		<div class="row bold">
+			<div class="col-xs-3"><span>Score: </span></div>
+			<div class="col-xs-9">{{ score.score }}</div>
+		</div>
+		<div class="row bold">
+			<div class="col-xs-3"><span>Name: </span></div>
+			<div class="col-xs-9">{{ score.name }}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3"><span>Date: </span></div>
+			<div class="col-xs-9">{{ score.date }}</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-3"><span>Message: </span></div>
+			<div class="col-xs-9">{{ score.message }}</div>
+		</div>
+	</div>
+	{% endfor %}
+	{% else %}
+	<div class="nomessage">
+		<p>No scores yet</p>
+	</div>
+	{% endif %}
+</div>
+{% endblock %}

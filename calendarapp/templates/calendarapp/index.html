@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Ex1</title>
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{% static 'js/app.js' %}"></script>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+{% if appointment_list %}
+<h1>Calendar App</h1>
+{% for appointment in appointment_list %}
+
+<div class="appointment-container">
+    <div class="date">{{ appointment.date|date:"j/m/Y" }}</div>
+    <h2>{{ appointment.title }}</h2>
+    <p>{{ appointment.description }}</p>
+</div>
+{% endfor %}
+{% else %}
+<div class="nomessage">
+    <p>No messages...</p>
+    <p>Click the '+' button to add a new appointment:</p>
+</div>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+button#nameButton:disabled {
+  background: #727272;
+}
+
+.slide {
+  position: absolute;
+  width: 600px;
+  transition: all 0.2s ease-in-out;
+  left: 600px;
+}
+
+.slide:first-child {
+  left: 0;
+}
+
+p#finalDescription {
+  margin-top: 40px;
+  font-size: 1.2em;
+  margin-bottom: 40px;
+}
+
+#question0 .panel-header {
+  background-image: url(http://debatepost.com/wp-content/uploads/2016/07/anonymous-1200.png);
+}
+
+#question1 .panel-header {
+  background-image: url(https://media.wired.com/photos/5926ebd87034dc5f91bed0f7/master/pass/COD-IW_E3_Ship-Assault-Space-Combat_WM.jpg);
+}
+
+#question2 .panel-header {
+  background-image: url(https://i.ytimg.com/vi/pJVrwxuJfDk/maxresdefault.jpg);
+}
+
+#question3 .panel-header {
+  background-image: url("http://cdn1.expertreviews.co.uk/sites/expertreviews/files/2016/08/best_xbox_one_games_witcher_3.jpg?itok=AXDVSS8J");
+}
+
+#question4 .panel-header {
+  background-image: url("https://parade.com/wp-content/uploads/2014/04/facts-about-farmville-ftr.jpg");
+}
+
+#question5 .panel-header {
+  background-image: url("http://s3.amazonaws.com/digitaltrends-uploads-prod/2015/05/leeroy-jenkins.jpg");
+}
+
+#question6 .panel-header.one {
+  background-image: url(https://previews.123rf.com/images/yobro10/yobro101207/yobro10120700034/14346023-Vintage-Old-Farmer-in-the-Corn-Fields-Stock-Photo-farmer-farm-field.jpg);
+}
+
+#question6 .panel-header.two {
+  background-image: url(http://www.funny-games.biz/images/pictures/1489-stupid-noob.jpg);
+}
+
+#question6 .panel-header.three {
+  background-image: url(http://cdn.c.photoshelter.com/img-get/I0000hdKndDaP2uc/s/600/600/100829-mlg-067.jpg);
+}
+
+#question6 .panel-header.four {
+  background-image: url(http://unrealitymag.com/wp-content/uploads/2013/08/hardcore2.jpg);
+}
+
+input[type="image"] {
+  width: 50%;
+  height: 140px;
+  float: left;
+  transition: opacity 0.2s ease-in-out;
+}
+
+input[type="image"]:hover {
+  opacity: 0.8;
+}
+
+input[type="radio"], input[type="checkbox"], input[type="button"] {
+  position: absolute;
+  left: 45px;
+  margin-top: -38px;
+}
+
+#nameButton {
+  position: relative;
+  margin-top: 35px;
+  width: 100%;
+  left: 0;
+  background: #3c67ba;
+  border: 0;
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#nameButton:after {
+  display: none;
+}

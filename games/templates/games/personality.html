@@ -1,0 +1,111 @@
+{% extends "games/base.html" %}
+{% block header %}
+{% load staticfiles %}
+<script src="{% static 'js/personality.js' %}"></script>
+<link href="{% static 'css/personality.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<div class="panel">
+    <div id="question0" class="slide">
+        <div class="panel-header">
+        </div>
+        <div class="panel-body">
+            <div class="question">What is your name?</div>
+            <div class="answers">
+                <input id="name" type="text" placeholder="Your Name">
+                <button disabled id="nameButton" onclick="firstRun();">CLICK ME</button>
+            </div>
+        </div>
+    </div>
+    <div id="question1" class="slide">
+        <div class="panel-header"  id="newImage">
+        </div>
+        <div class="panel-body">
+            <div class="question">Which picture appeals you the most?</div>
+            <div class="answers">
+                <input value="1" id="image1" type="image" src="http://www.wsgf.org/f/u/imagecache/node-gallery-display/contrib/dr/328/ingame_4x3.jpg" onclick="runGame(this);">
+                <input value="2" id="image2" type="image" src="https://vignette4.wikia.nocookie.net/nintendogs/images/e/eb/Lab-yellow.jpg/revision/latest?cb=20110607180500" onclick="runGame(this)">
+                <input value="4" id="image3" type="image" src="https://www.technobuffalo.com/wp-content/uploads/2015/10/Tribes-2.jpg"  onclick="runGame(this)">
+                <input value="3" id="image4" type="image" src="https://upload.wikimedia.org/wikipedia/en/7/7c/Battlefield_2142_screenshot.jpg" onclick="runGame(this)">
+            </div>
+        </div>
+    </div>
+    <div id="question2" class="slide">
+        <div class="panel-header">
+        </div>
+        <div class="panel-body">
+            <div class="question">Have you ever spent the whole night playing a video game?</div>
+            <div class="answers">
+                <label for="radio1">Never</label>
+                <input value="1" id="radio1" type="radio" onchange="runGame(this)">
+                <label for="radio2">Maybe once</label>
+                <input value="2" id="radio2" type="radio" onchange="runGame(this)">
+                <label for="radio3">Occasionally</label>
+                <input value="3" id="radio3" type="radio" onchange="runGame(this)">
+                <label for="radio4">Yeah dude!! So many times</label>
+                <input value="4" id="radio4" type="radio" onchange="runGame(this)">
+            </div>
+        </div>
+    </div>
+    <div id="question3" class="slide">
+        <div class="panel-header">
+        </div>
+        <div class="panel-body">
+            <div class="question">What's your favorite game in that list?</div>
+            <div class="answers">
+                <button value="1" onclick="runGame(this);">The Sims</button>
+                <button value="2" onclick="runGame(this);">Fifa</button>
+                <button value="3" onclick="runGame(this);">MineCraft</button>
+                <button value="4" onclick="runGame(this);">Any Blizzard Game</button>
+            </div>
+        </div>
+    </div>
+    <div id="question4" class="slide">
+        <div class="panel-header">
+        </div>
+        <div class="panel-body">
+            <div class="question">Have you ever bought in-game currency for real money?</div>
+            <div class="answers">
+                <label for="checkbox1">Hell yeah, I bought hearts on Candy Crush!</label>
+                <input value="1" id="checkbox1" type="checkbox" onchange="runGame(this)">
+                <label for="checkbox2">It happened more than once</label>
+                <input value="2" id="checkbox2" type="checkbox" onchange="runGame(this)">
+                <label for="checkbox3">It happened once</label>
+                <input value="3" id="checkbox3" type="checkbox" onchange="runGame(this)">
+                <label for="checkbox4">I'm way too good to pay for stuff like that</label>
+                <input value="4" id="checkbox4" type="checkbox" onchange="runGame(this)">
+            </div>
+        </div>
+    </div>
+    <div id="question5" class="slide">
+        <div class="panel-header">
+        </div>
+        <div class="panel-body">
+            <div class="question">Do you know who's Leeroy Jenkins?</div>
+            <div class="answers">
+                <label for="button1"> what?</label>
+                <input value="1" id="button1" type="button" onclick="finalAnswer(this)">
+                <label for="button2">That rings a bell, but I don't know</label>
+                <input value="2" id="button2" type="button" onclick="finalAnswer(this)">
+                <label for="button3">I know that reference!</label>
+                <input value="3" id="button3" type="button" onclick="finalAnswer(this)">
+                <label for="button3">LEEEEEEROOOOOOYYYYYYYYYYYY</label>
+                <input value="4" id="button3" type="button" onclick="finalAnswer(this)">
+            </div>
+        </div>
+    </div>
+    <div id="question6" class="slide final">
+        <div class="panel-header" id="finalPicture">
+        </div>
+        <div class="panel-body">
+            <div class="question">Congratulations <span id="userName"></span></div>
+            <div class="answers" id="answer">
+                <h3>Your final score is <span id="finalScore"></span></h3>
+                <p id="finalDescription"></p>
+                <input type="text" id="message" placeholder="Winning Message">
+                <button id="saveScore">Save Score</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

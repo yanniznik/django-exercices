@@ -1,0 +1,32 @@
+{% extends "games/base.html" %}
+{% block header %}
+{% load staticfiles %}
+<script src="{% static 'js/hangman.js' %}"></script>
+<link href="{% static 'css/hangman.css' %}" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<div class="panel">
+<div class="panel-header">
+    <div class="question">Hangman</div>
+    <p>Use the alphabet below to guess the word, or click hint to get a clue. </p>
+    <div id="hold">
+    </div>
+</div>
+<div class="panel-body">
+    <p id="catagoryName"></p>
+    <div id="buttons">
+    </div>
+    <p id="mylives"></p>
+    <div id="scoreform" class="hidden">
+        <h2>You won!</h2>
+        <input id="name" type="text" placeholder="name" name="name">
+        <input id="message" type="text" placeholder="message" name="message">
+        <button class="btn btn-default" id="saveScore">Submit</button>
+    </div>
+    <p id="clue">Clue -</p>
+    <div class="boutton-container">
+        <button id="hint">Hint</button>
+        <button id="reset">Play again</button>
+    </div>
+</div>
+{% endblock %}

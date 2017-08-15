@@ -1,0 +1,161 @@
+/* Variabes */
+/* Mixin's */
+
+.wrappper {
+    width: 100%;
+    margin: 0 auto;
+}
+.wrappper:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.panel-body {
+    position: relative;
+}
+div#scoreform {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    text-align: center;
+    padding: 80px;
+}
+h2 {
+    font-size: 1.6em;
+}
+p {
+    font-size: 1.6em;
+}
+button:after,
+label:after {
+    color: #ffffff;
+    position: absolute;
+    font-family: 'Glyphicons Halflings';
+    content: "\e080";
+    opacity: 0;
+    right: 7px;
+    transition: opacity 0.2s ease-in-out;
+}
+.panel-header {
+    text-align: center;
+    padding: 65px;
+    box-shadow: 0 0 0px 1px rgb(164, 166, 169);
+}
+#alphabet {
+    margin: 15px auto;
+    padding: 0;
+    max-width: 900px;
+}
+#alphabet:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#alphabet li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    list-style: none;
+    width: 45px;
+    height: 40px;
+    padding: 10px 0 0 18px;
+    background: #d0d4de;
+    color: #4a4d62;
+    cursor: pointer;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border: solid 1px #333;
+}
+#alphabet li:hover {
+    background: #000;
+    border: solid 1px #000;
+    color: #fff;
+}
+#my-word {
+    margin: 0;
+    display: block;
+    padding: 0;
+    display: block;
+}
+#my-word li {
+    position: relative;
+    list-style: none;
+    margin: 0;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 1.6em;
+}
+.active {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    cursor: default;
+}
+.active:hover {
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    -moz-transition: all 1s ease-in;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+}
+#mylives {
+    font-size: 1.6em;
+    text-align: center;
+    display: block;
+}
+button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    background: #337ab7;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 18px 10px;
+    width: 115px;
+    margin: 10px;
+    outline: none;
+    border-radius: 0;
+}
+.boutton-container {
+    position: absolute;
+    left: -125px;
+    bottom: 10px;
+}
+.panel {
+    overflow: visible;
+}
+button:hover {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: #64c845;
+    color: #fff;
+}
+p#clue {
+    padding-top: 20px;
+    text-align: center;
+    color: #337ab7;
+}
+@media (max-width: 767px) {
+    #alphabet {
+        padding: 0 0 0 15px;
+    }
+}
+@media (max-width: 480px) {
+    #alphabet {
+        padding: 0 0 0 25px;
+    }
+}

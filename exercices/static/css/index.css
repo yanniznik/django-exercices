@@ -1,0 +1,27 @@
+.panel-header {
+    text-align: center;
+    padding: 30px;
+    height: 150px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+li span {
+    font-style: italic;
+}
+
+.panel {
+	height: auto;
+}
+
+.col-xs-3 {
+    text-align: right;
+    font-style: italic;
+}
+
+.bold {
+	font-weight: bold;
+}

@@ -1,0 +1,120 @@
+.appointment-container {
+    border: 1px solid #000;
+    width: auto;
+    padding: 20px;
+    display: inline-block;
+    margin: 20px;
+}
+.main {
+    margin: 20px;
+}
+.btn-container {
+    margin-top: 20px;
+    padding: 20px;
+}
+.score-container {
+    margin-bottom: 20px;
+    border: 2px dashed;
+    padding: 20px 10px;
+}
+ul {
+    margin: 0;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #d7dce6, #cfd3dd);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+*:focus {
+    outline: 0 !important;
+}
+h1 {
+    text-align: center;
+    padding: 40px;
+    color: #fff;
+}
+a {
+    color: #ff3366;
+    font-weight: bold;
+}
+button,
+label {
+    background: none;
+    border: 0;
+    display: block;
+    padding: 20px 0;
+    color: #a2a3ab;
+    font-size: 1.2em;
+    border-bottom: 1px solid rgba(162, 163, 171, 0.25);
+    width: 100%;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    font-weight: 600;
+    margin: 0;
+}
+button:after,
+label:after {
+    color: #ff3366;
+    position: absolute;
+    font-family: 'Glyphicons Halflings';
+    content: "\e080";
+    opacity: 0;
+    right: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+button:hover:after,
+label:hover:after {
+    opacity: 1;
+}
+button:hover,
+label:hover {
+    color: #ff3366;
+}
+button:last-child {
+    border: 0;
+}
+input#name,
+input#message {
+    width: 100%;
+    padding: 10px 0;
+    border: 0;
+    border-bottom: 1px solid #c9c9c9;
+    font-size: 1.5em;
+}
+button#saveScore {
+    display: block;
+    background: #404d6f;
+    width: 100%;
+    margin-top: 20px;
+    color: #fff;
+}
+#reset {
+    display: none;
+}
+.panel {
+    box-shadow: 0 0 5px 2px rgb(164, 166, 169);
+    border-radius: 0;
+    margin: 0 auto;
+    margin-top: 0px;
+    border: 0;
+    overflow: hidden;
+    width: 600px;
+    position: relative;
+    height: 760px;
+}
+.panel-header {
+    background: #f9fafc;
+    height: 300px;
+    background-size: cover;
+}
+.panel-body {
+    padding: 35px 80px 20px 80px;
+}
+.question {
+    font-size: 2em;
+    color: #4a4d62;
+    letter-spacing: -0.6px;
+    font-weight: 600;
+    padding-bottom: 35px;
+}
