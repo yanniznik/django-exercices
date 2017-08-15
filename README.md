@@ -1,10 +1,10 @@
-# Heroku Django Exercices
+# Django Exercices
 
 - Production-ready configuration for Static Files, Database Settings, Gunicorn, etc.
 - Enhancements to Django's static file serving functionality via WhiteNoise.
 - Latest Python 3.6 runtime environment. 
 
-# Heroku Django Exercices
+# Django Exercices
 - Hangman game
 - Personality game
 - Calendar App
